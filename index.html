@@ -4,10 +4,19 @@
 :root{--bg:#08080a;--card:#15151b;--line:#26262e;--txt:#e8e8ec;--mut:#9a9aa6;--acc:#3ea6ff;--gold:#f5c451}
 *{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;line-height:1.5;padding:0 0 80px}
 .wrap{max-width:1500px;margin:0 auto;padding:0 22px}
-header{padding:40px 0 20px;border-bottom:1px solid var(--line);margin-bottom:22px}
+header{padding:38px 0 18px;border-bottom:1px solid var(--line);margin-bottom:22px}
 h1{font-size:30px;font-weight:800;letter-spacing:-.5px}h1 .tag{font-size:13px;font-weight:600;color:#000;background:var(--gold);padding:3px 10px;border-radius:6px;margin-left:10px;vertical-align:middle}
-.sub{color:var(--mut);margin-top:10px;font-size:15px;max-width:920px}
-.stats{display:flex;gap:22px;margin-top:14px;font-size:13px;color:var(--mut);flex-wrap:wrap}.stats b{color:var(--txt)}
+.sub{color:var(--mut);margin-top:10px;font-size:15px;max-width:940px}
+h2{font-size:20px;margin:32px 0 8px;font-weight:700}h2 .c{color:var(--gold)}
+.note{color:var(--mut);font-size:13.5px;margin-bottom:16px}
+.data{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0 6px}
+@media(max-width:760px){.data{grid-template-columns:1fr}}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.dcard.a{border-left:3px solid var(--acc)}.dcard.b{border-left:3px solid var(--gold)}
+.dcard h3{font-size:15px;margin-bottom:4px}.dcard .s{font-size:12px;color:var(--mut);margin-bottom:10px}
+.kv{display:flex;justify-content:space-between;font-size:13px;padding:3px 0;border-bottom:1px solid #1e1e26}
+.kv b{color:var(--txt)}.kv span{color:var(--mut)}
+.bignum{font-size:26px;font-weight:800;color:var(--gold)}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(5,1fr)}
 @media(max-width:1300px){.grid{grid-template-columns:repeat(4,1fr)}}@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}.card:hover{border-color:var(--acc)}
@@ -17,39 +26,89 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.5px}h1 .tag{font-size:13px;fo
 .caps{color:#8a8a94;font-size:10.5px;margin-top:6px;border-top:1px solid var(--line);padding-top:6px}
 footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}a{color:var(--acc)}
 </style></head><body><div class="wrap">
-<header><h1>DJI KOC Video Demo <span class="tag">10 条样片</span></h1>
-<div class="sub">把网红自己的素材自动重剪成 DJI 风格营销视频。10 条不同风格(快闪/电影/教程/Vlog/强节奏),专业字幕+电影级转场。🔊 开声音看。<br><b style="color:#fff">想调整?直接告诉负责人,我们会更新这个页面。</b></div>
-<div class="stats"><span>📐 <b>1080×1920</b></span><span>🎬 <b>10 条</b></span><span>🎨 <b>5 种风格</b></span><span>🚫 无水印</span></div></header>
+<header><h1>DJI KOC Video Demo <span class="tag">16 条 · 含 UGC</span></h1>
+<div class="sub">自动把<b style="color:#fff">两类素材</b>重剪成 DJI 风格营销视频:网红自己的旅拍 + 真人"正在使用" DJI 的 UGC 动作素材。8 种风格,自然多变。🔊 开声音看。<br><b style="color:#fff">想调整?告诉负责人即可,我们会更新这个页面。</b></div></header>
+
+<h2><span class="c">📊</span> 数据集分析(两类资产明确区分)</h2>
+<div class="note">我用 Gemini 把两个数据集逐条标注、理解后组合。下面是数量、构成、以及如何切分组合。</div>
+<div class="data">
+<div class="dcard a"><h3>🅰 数据集 A — 网红自有素材</h3><div class="s">artur17.style (Instagram)</div>
+<div class="kv"><span>下载总数</span><b>70 条</b></div>
+<div class="kv"><span>可用(剔除损坏 VP9 14 条)</span><b>56 条</b></div>
+<div class="kv"><span>高清 720×1280</span><b>19 条</b></div>
+<div class="kv"><span>人脸比对后安全片段</span><b>51 段</b></div>
+<div class="kv"><span>含陌生人脸→已排除</span><b>19 条</b></div>
+<div class="kv"><span>构成</span><span>穿搭18/vlog17/带货14/旅拍3</span></div>
+</div>
+<div class="dcard b"><h3>🅱 数据集 B — 公开 DJI UGC</h3><div class="s">@shotondji / @osmopocket / @djiphotography (public UGC reposts)</div>
+<div class="kv"><span>下载总数</span><b>75 条</b></div>
+<div class="kv"><span>真人正在用相机</span><b>12 条</b></div>
+<div class="kv"><span>高 flash-cut 价值(≥6)</span><b>43 条</b></div>
+<div class="kv"><span>动作类(action)</span><b>16 条</b></div>
+<div class="kv"><span>航拍 / POV手持</span><b>13 / 3</b></div>
+<div class="kv"><span>能量分布</span><span>高能10/上扬18/电影30</span></div>
+</div>
+</div>
+<div class="dcard" style="margin-top:14px"><h3>🔧 如何组合 & 切分</h3>
+<div class="kv"><span>总成片</span><b>16 条 · 8 种风格</b></div>
+<div class="kv"><span>镜头来源占比</span><b>网红 64 镜 · UGC 32 镜 · DJI官方(仅hook) 16 镜</b></div>
+<div class="kv"><span>切分方法</span><span>Gemini 标注每条最佳片段时间码 → 按风格"基因"随机组合 → 每镜 0.8-3.2s</span></div>
+<div class="kv"><span>风格基因</span><span>actionenergy · cinematic · fastcut · flashmontage · punchy · tips · ugcmix · vlog</span></div>
+</div>
+
+<h2><span class="c">💥</span> 新:UGC "正在使用"风格(6 条)</h2>
+<div class="note">用真人动作 UGC(BMX/滑板车/跑酷/山地车/FPV)+ Flash 快闪剪辑,自然有活人感。</div>
+<div class="grid"><div class="card" style="border-color:#f5c451"><video src="videos/u01-flashmontage.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">💥 UGC快闪</div><div class="t">POV: You Got an Osmo</div>
+  <div class="d">7 镜 · UGC素材</div>
+  <div class="caps">Pure flow · This is wild · So smooth · Wait for it</div></div></div><div class="card" style="border-color:#f5c451"><video src="videos/u02-flashmontage.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">💥 UGC快闪</div><div class="t">POV: You Got an Osmo</div>
+  <div class="d">7 镜 · UGC素材</div>
+  <div class="caps">No way · So smooth · Insane stabilization · Pure flow</div></div></div><div class="card" style="border-color:#f5c451"><video src="videos/u03-ugcmix.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🤝 UGC混剪</div><div class="t">Why Creators Pick Osmo</div>
+  <div class="d">6 镜 · UGC素材</div>
+  <div class="caps">Real creators, real shots · Anywhere you go · From streets to trails · Just press record</div></div></div><div class="card" style="border-color:#f5c451"><video src="videos/u04-ugcmix.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🤝 UGC混剪</div><div class="t">Why Creators Pick Osmo</div>
+  <div class="d">6 镜 · UGC素材</div>
+  <div class="caps">Real creators, real shots · Anywhere you go · From streets to trails · Just press record</div></div></div><div class="card" style="border-color:#f5c451"><video src="videos/u05-actionenergy.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🛹 动作能量</div><div class="t">Sent It. Shot It.</div>
+  <div class="d">8 镜 · UGC素材</div>
+  <div class="caps"></div></div></div><div class="card" style="border-color:#f5c451"><video src="videos/u06-actionenergy.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🛹 动作能量</div><div class="t">Sent It. Shot It.</div>
+  <div class="d">8 镜 · UGC素材</div>
+  <div class="caps"></div></div></div></div>
+
+<h2><span class="c">🎬</span> 原:网红旅拍风格(10 条)</h2>
 <div class="grid"><div class="card"><video src="videos/v01-fastcut.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">⚡ 快闪</div><div class="t">POV: You Got an Osmo Pocket</div>
-  <div class="d">8 镜 · 快节奏硬切,POV感</div>
-  <div class="caps"></div></div></div><div class="card"><video src="videos/v02-fastcut.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="d">8 镜</div>
+  <div class="caps">This is wild · Pocket-sized · So smooth · Game changer</div></div></div><div class="card"><video src="videos/v02-fastcut.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">⚡ 快闪</div><div class="t">POV: You Got an Osmo Pocket</div>
-  <div class="d">8 镜 · 快节奏硬切,POV感</div>
-  <div class="caps"></div></div></div><div class="card"><video src="videos/v03-cinematic.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="d">8 镜</div>
+  <div class="caps">So smooth · Game changer · This is wild · Just press record</div></div></div><div class="card"><video src="videos/v03-cinematic.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">🎬 电影感</div><div class="t">How to Film Cinematic Travel</div>
-  <div class="d">6 镜 · 慢节奏,长镜,电影级转场</div>
+  <div class="d">6 镜</div>
   <div class="caps">Frame the icons · Move with the subject · Use leading lines · Shoot wide for scale</div></div></div><div class="card"><video src="videos/v04-cinematic.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">🎬 电影感</div><div class="t">How to Film Cinematic Travel</div>
-  <div class="d">6 镜 · 慢节奏,长镜,电影级转场</div>
+  <div class="d">6 镜</div>
   <div class="caps">Keep it steady · Move with the subject · Let the city breathe · Shoot in 4K 60fps</div></div></div><div class="card"><video src="videos/v05-tips.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">📝 教程</div><div class="t">5 Shots That Look Expensive</div>
-  <div class="d">7 镜 · 拍摄要点字幕 listicle</div>
+  <div class="d">7 镜</div>
   <div class="caps">Use leading lines · Move with the subject · Let the city breathe · Chase the light</div></div></div><div class="card"><video src="videos/v06-tips.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">📝 教程</div><div class="t">5 Shots That Look Expensive</div>
-  <div class="d">7 镜 · 拍摄要点字幕 listicle</div>
+  <div class="d">7 镜</div>
   <div class="caps">Golden hour wins · Let the city breathe · Chase the light · Move with the subject</div></div></div><div class="card"><video src="videos/v07-vlog.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">📹 Vlog</div><div class="t">A Day in London</div>
-  <div class="d">7 镜 · 叙事日常,场景串联</div>
+  <div class="d">7 镜</div>
   <div class="caps">Wandering · Sunset · Street style · The little moments</div></div></div><div class="card"><video src="videos/v08-vlog.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">📹 Vlog</div><div class="t">A Day in London</div>
-  <div class="d">7 镜 · 叙事日常,场景串联</div>
+  <div class="d">7 镜</div>
   <div class="caps">Wandering · Street style · City vibes · Good food</div></div></div><div class="card"><video src="videos/v09-punchy.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">🔥 强节奏</div><div class="t">Why Creators Film on Osmo</div>
-  <div class="d">7 镜 · 卡点种草</div>
+  <div class="d">7 镜</div>
   <div class="caps">Find the foreground · Chase the light · Match cuts to beat · Slow-mo at 120fps</div></div></div><div class="card"><video src="videos/v10-punchy.mp4" controls playsinline preload="metadata" loop></video>
   <div class="meta"><div class="g">🔥 强节奏</div><div class="t">Why Creators Film on Osmo</div>
-  <div class="d">7 镜 · 卡点种草</div>
+  <div class="d">7 镜</div>
   <div class="caps">Keep it steady · Golden hour wins · Let the city breathe · Shoot in 4K 60fps</div></div></div></div>
-<footer>DJI KOC 自动剪辑 demo · 内部预览 · 可多轮迭代调整</footer>
+<footer>DJI KOC 自动剪辑 demo · 两数据集 A(网红)+B(UGC) · 可多轮迭代调整</footer>
 </div></body></html>
