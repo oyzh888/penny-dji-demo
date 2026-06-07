@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DJI KOC Video Demo</title>
+<style>
+:root{--bg:#08080a;--card:#15151b;--line:#26262e;--txt:#e8e8ec;--mut:#9a9aa6;--acc:#3ea6ff;--gold:#f5c451}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;line-height:1.5;padding:0 0 80px}
+.wrap{max-width:1500px;margin:0 auto;padding:0 22px}
+header{padding:40px 0 20px;border-bottom:1px solid var(--line);margin-bottom:22px}
+h1{font-size:30px;font-weight:800;letter-spacing:-.5px}h1 .tag{font-size:13px;font-weight:600;color:#000;background:var(--gold);padding:3px 10px;border-radius:6px;margin-left:10px;vertical-align:middle}
+.sub{color:var(--mut);margin-top:10px;font-size:15px;max-width:920px}
+.stats{display:flex;gap:22px;margin-top:14px;font-size:13px;color:var(--mut);flex-wrap:wrap}.stats b{color:var(--txt)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(5,1fr)}
+@media(max-width:1300px){.grid{grid-template-columns:repeat(4,1fr)}}@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}.card:hover{border-color:var(--acc)}
+.card video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
+.meta{padding:11px 12px}.g{font-size:11px;color:var(--gold);font-weight:600;margin-bottom:3px}
+.t{font-weight:700;font-size:14px;line-height:1.25}.d{color:var(--mut);font-size:11.5px;margin-top:4px}
+.caps{color:#8a8a94;font-size:10.5px;margin-top:6px;border-top:1px solid var(--line);padding-top:6px}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}a{color:var(--acc)}
+</style></head><body><div class="wrap">
+<header><h1>DJI KOC Video Demo <span class="tag">10 条样片</span></h1>
+<div class="sub">把网红自己的素材自动重剪成 DJI 风格营销视频。10 条不同风格(快闪/电影/教程/Vlog/强节奏),专业字幕+电影级转场。🔊 开声音看。<br><b style="color:#fff">想调整?直接告诉负责人,我们会更新这个页面。</b></div>
+<div class="stats"><span>📐 <b>1080×1920</b></span><span>🎬 <b>10 条</b></span><span>🎨 <b>5 种风格</b></span><span>🚫 无水印</span></div></header>
+<div class="grid"><div class="card"><video src="videos/v01-fastcut.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">⚡ 快闪</div><div class="t">POV: You Got an Osmo Pocket</div>
+  <div class="d">8 镜 · 快节奏硬切,POV感</div>
+  <div class="caps"></div></div></div><div class="card"><video src="videos/v02-fastcut.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">⚡ 快闪</div><div class="t">POV: You Got an Osmo Pocket</div>
+  <div class="d">8 镜 · 快节奏硬切,POV感</div>
+  <div class="caps"></div></div></div><div class="card"><video src="videos/v03-cinematic.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🎬 电影感</div><div class="t">How to Film Cinematic Travel</div>
+  <div class="d">6 镜 · 慢节奏,长镜,电影级转场</div>
+  <div class="caps">Frame the icons · Move with the subject · Use leading lines · Shoot wide for scale</div></div></div><div class="card"><video src="videos/v04-cinematic.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🎬 电影感</div><div class="t">How to Film Cinematic Travel</div>
+  <div class="d">6 镜 · 慢节奏,长镜,电影级转场</div>
+  <div class="caps">Keep it steady · Move with the subject · Let the city breathe · Shoot in 4K 60fps</div></div></div><div class="card"><video src="videos/v05-tips.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">📝 教程</div><div class="t">5 Shots That Look Expensive</div>
+  <div class="d">7 镜 · 拍摄要点字幕 listicle</div>
+  <div class="caps">Use leading lines · Move with the subject · Let the city breathe · Chase the light</div></div></div><div class="card"><video src="videos/v06-tips.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">📝 教程</div><div class="t">5 Shots That Look Expensive</div>
+  <div class="d">7 镜 · 拍摄要点字幕 listicle</div>
+  <div class="caps">Golden hour wins · Let the city breathe · Chase the light · Move with the subject</div></div></div><div class="card"><video src="videos/v07-vlog.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">📹 Vlog</div><div class="t">A Day in London</div>
+  <div class="d">7 镜 · 叙事日常,场景串联</div>
+  <div class="caps">Wandering · Sunset · Street style · The little moments</div></div></div><div class="card"><video src="videos/v08-vlog.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">📹 Vlog</div><div class="t">A Day in London</div>
+  <div class="d">7 镜 · 叙事日常,场景串联</div>
+  <div class="caps">Wandering · Street style · City vibes · Good food</div></div></div><div class="card"><video src="videos/v09-punchy.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🔥 强节奏</div><div class="t">Why Creators Film on Osmo</div>
+  <div class="d">7 镜 · 卡点种草</div>
+  <div class="caps">Find the foreground · Chase the light · Match cuts to beat · Slow-mo at 120fps</div></div></div><div class="card"><video src="videos/v10-punchy.mp4" controls playsinline preload="metadata" loop></video>
+  <div class="meta"><div class="g">🔥 强节奏</div><div class="t">Why Creators Film on Osmo</div>
+  <div class="d">7 镜 · 卡点种草</div>
+  <div class="caps">Keep it steady · Golden hour wins · Let the city breathe · Shoot in 4K 60fps</div></div></div></div>
+<footer>DJI KOC 自动剪辑 demo · 内部预览 · 可多轮迭代调整</footer>
+</div></body></html>
