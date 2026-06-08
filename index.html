@@ -1,60 +1,23 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DJI KOC — 主线驱动剪辑</title>
-<style>
-:root{--bg:#08080a;--card:#15151b;--line:#26262e;--txt:#e8e8ec;--mut:#9a9aa6;--acc:#3ea6ff;--gold:#f5c451;--blue:#3ea6ff}
-*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;line-height:1.5;padding:0 0 80px}
-.wrap{max-width:1500px;margin:0 auto;padding:0 22px}
-header{padding:38px 0 18px;border-bottom:1px solid var(--line);margin-bottom:22px}
-h1{font-size:30px;font-weight:800;letter-spacing:-.5px}h1 .tag{font-size:13px;font-weight:600;color:#000;background:var(--gold);padding:3px 10px;border-radius:6px;margin-left:10px;vertical-align:middle}
-.sub{color:var(--mut);margin-top:10px;font-size:15px;max-width:960px}
-.logic{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:13.5px;color:#cdd2da}
-.logic b{color:var(--gold)}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
-@media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}.card:hover{border-color:var(--acc)}
-.card video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
-.meta{padding:11px 13px}.g{font-size:11px;color:var(--gold);font-weight:600;margin-bottom:4px}
-.t{font-weight:700;font-size:14.5px;line-height:1.25}
-.struct{font-size:11px;color:#9a9aa6;margin:7px 0;letter-spacing:.3px}
-.concept{color:#8a8a94;font-size:11px;border-top:1px solid var(--line);padding-top:7px;line-height:1.5}
-h2{font-size:20px;margin:30px 0 12px}
-footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}a{color:var(--acc)}
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DJI KOC — 按原片时长重剪</title><style>
+:root{--bg:#08080a;--card:#15151b;--line:#26262e;--txt:#e8e8ec;--mut:#9a9aa6;--gold:#f5c451}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--txt);font-family:-apple-system,system-ui,sans-serif;padding:0 0 80px}
+.wrap{max-width:1400px;margin:0 auto;padding:0 22px}header{padding:36px 0 18px;border-bottom:1px solid var(--line);margin-bottom:22px}
+h1{font-size:28px;font-weight:800}h1 .tag{font-size:13px;font-weight:600;color:#000;background:var(--gold);padding:3px 10px;border-radius:6px;margin-left:10px;vertical-align:middle}
+.sub{color:var(--mut);margin-top:10px;font-size:15px;max-width:940px}
+.logic{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:13px 17px;margin-top:14px;font-size:13.5px;color:#cdd2da}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}.card video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.meta{padding:11px 13px}.g{font-size:11px;color:var(--gold);font-weight:600}.t{font-weight:700;font-size:15px;margin:4px 0}.d{color:var(--mut);font-size:12px}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}a{color:#3ea6ff}
 </style></head><body><div class="wrap">
-<header><h1>DJI KOC Video <span class="tag">主线驱动 · 8 条</span></h1>
-<div class="sub">这版换了剪法逻辑——<b style="color:#fff">不再套同一个模板</b>。以<b style="color:#fff">博主每条原视频的主线</b>为骨架(决定结构和长度),把<b style="color:#fff">场景相似</b>的 DJI UGC 片段匹配着插进去。所以每条结构不同、长度不同(8s~22s)。🔊 开声音看。</div>
-<div class="logic"><b>剪辑逻辑(按你的方案):</b> ① 相似度匹配:24 条博主片段 × 59 条 DJI UGC,按场景/画面相似度配对(海边配海边、街拍配街拍) → ② 主线驱动:以博主视频为骨架,DJI 片段插在场景接得上的地方 → 结果:<b>长度多变、结构丰富、不再千篇一律</b>。下方每条标了结构(🟡博主 / 🔵DJI)和它讲什么。</div></header>
-<div class="grid"><div class="card"><video src="videos/m01-short.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">⚡ 短 ~8s · single influencer</div>
-  <div class="t">Neon Nights</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A high-energy, short-form reel interleaving a fashion walk in Piccadilly Circus at night with a fast-paced night-out POV</div></div></div><div class="card"><video src="videos/m02-long.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">📖 长 ~22s · multi influencer</div>
-  <div class="t">The London Tourist</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主 → 🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A narrative travel montage combining two different London street clips of the influencer with grand, sweeping DJI shots </div></div></div><div class="card"><video src="videos/m03-medium.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">🎬 中 ~12s · single influencer</div>
-  <div class="t">Ocean Escape</div>
-  <div class="struct">🔵DJI → 🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A medium-length reel where the DJI clip serves as an energetic intro hook (diving into a pool) that seamlessly cuts to t</div></div></div><div class="card"><video src="videos/m04-short.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">⚡ 短 ~8s · single influencer</div>
-  <div class="t">The Art Enthusiast</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A quick, creative edit matching the influencer's modern art museum visit with a DJI clip of an artist painting outdoors,</div></div></div><div class="card"><video src="videos/m05-long.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">📖 长 ~22s · multi influencer</div>
-  <div class="t">Luxury Street Style</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主 → 🔵DJI → 🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A long, premium-feeling edit combining two influencer clips of high-end fashion (trench coat, luxury watch) interleaved </div></div></div><div class="card"><video src="videos/m06-medium.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">🎬 中 ~12s · single influencer</div>
-  <div class="t">Zen Moments</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A serene, medium-length edit that starts with the influencer in a Japanese garden and cuts to a peaceful DJI walk throug</div></div></div><div class="card"><video src="videos/m07-short.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">⚡ 短 ~8s · single influencer</div>
-  <div class="t">Urban Edge</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A punchy, fast-paced 8s reel matching an edgy urban fashion pose on a high ledge with an explosive parkour jump.</div></div></div><div class="card"><video src="videos/m08-medium.mp4" controls playsinline preload="metadata" loop></video>
-  <div class="meta"><div class="g">🎬 中 ~12s · single influencer</div>
-  <div class="t">The Nightcap Vlog</div>
-  <div class="struct">🟡博主 → 🔵DJI → 🟡博主</div>
-  <div class="concept">A medium-length lifestyle vlog edit. The influencer walks through a dimly lit bar, and we interleave a DJI clip showing </div></div></div></div>
-<footer>DJI KOC · 主线驱动剪辑 · 博主主线 + 场景匹配 DJI 插入 · 可多轮迭代</footer>
-</div></body></html>
+<header><h1>DJI KOC Video <span class="tag">按原片时长重剪 · 6 条</span></h1>
+<div class="sub">每条以博主<b style="color:#fff">一条原视频为主线</b>,<b style="color:#fff">剪成它的原始时长</b>(8s/11s/16s/17s…),中间用确认的 DJI Osmo Pocket 素材按场景匹配插入。长度天然不同。🔊</div>
+<div class="logic"><b>剪辑逻辑:</b>原片 15s → 成片 15s。结构 = 博主开场(~40%)→ DJI 产品插入(~25%,场景匹配)→ 博主收尾(~35%)。DJI 素材都是你确认能用的(真 DJI + 手持 + 调性符合)。</div></header>
+<div class="grid"><div class="card"><video src="videos/d01-8s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 8.9s · 按原片时长</div><div class="t">City Views</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · 伦敦Gherkin天台 — 西装 posing</div></div></div><div class="card"><video src="videos/d02-11s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 11s · 按原片时长</div><div class="t">London by the River</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · 泰晤士河畔慵懒</div></div></div><div class="card"><video src="videos/d03-16s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 16.5s · 按原片时长</div><div class="t">Coastal Escape</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · 西班牙海岸旅拍</div></div></div><div class="card"><video src="videos/d04-17s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 17s · 按原片时长</div><div class="t">A Night Out</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · ZIMA 餐厅探店</div></div></div><div class="card"><video src="videos/d05-14s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 14.9s · 按原片时长</div><div class="t">Quiet Moments</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · 日式庭院</div></div></div><div class="card"><video src="videos/d06-16s.mp4" controls playsinline preload="metadata" loop></video>
+    <div class="meta"><div class="g">⏱ 16.6s · 按原片时长</div><div class="t">Street Style</div><div class="d">🟡博主主线 + 🔵DJI场景匹配插入 · 伦敦街头穿搭</div></div></div></div>
+<footer>DJI KOC · 按原片时长 + 主线驱动 + 场景匹配 · 可多轮迭代</footer></div></body></html>
